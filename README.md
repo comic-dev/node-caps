@@ -91,7 +91,7 @@ import Caps from 'node-caps';
 
 Caps.reg('the netherlands') /* Expected output: 'The Netherlands' */
 // But
-Caps.reg('north-us') /* Expected output: 'North-US'
+Caps.reg('north-us') /* Expected output: 'North-US' */
 ```
 
 **_Copyright (c) 2020 simp. & Salvage_**
