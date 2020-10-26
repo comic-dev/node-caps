@@ -2,6 +2,11 @@
 
 **An easy-to-use module to capitalise an string or array**
 
+**Features**
+
+- Fast, up-to-date code-base with ESM support.
+- Typings included
+
 # Explanation
 
 ```js
