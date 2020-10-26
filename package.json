@@ -6,8 +6,52 @@
   "main": "./src/index.js",
   "types": "./src/typings/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "prettier --write ."
   },
   "author": "simp.",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.1.2"
+  },
+  
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"lint-staged": {
+		"*{.js,.ts,.d.ts}": "prettier --write ."
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-angular"
+		],
+		"rules": {
+			"scope-case": [
+				2,
+				"always",
+				"pascal-case"
+			],
+			"type-enum": [
+				2,
+				"always",
+				[
+					"chore",
+					"feat",
+					"fix",
+					"revert",
+					"style",
+					"test",
+					"deps",
+					"docs",
+					"ci"
+				]
+			]
+		}
+	}
 }
