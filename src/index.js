@@ -1,5 +1,5 @@
-const Caps = require('./func/index');
+const Caps = require("./func/index");
 module.exports = {
-    ...Caps,
-    version: require('../package.json').version
-}
+  ...Caps,
+  version: require("../package.json").version,
+};
