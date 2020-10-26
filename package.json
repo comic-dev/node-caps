@@ -1,6 +1,6 @@
 {
   "name": "node-caps",
-  "version": "1.1.4",
+  "version": "1.2.1",
   "description": "An easy-to-use module to capitalise an string or array",
   "module": "./src/esm/index.esm.js",
   "main": "./src/index.js",
@@ -9,7 +9,7 @@
     "lint": "prettier --write ."
   },
   "author": "simp.",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-angular": "^11.0.0",
