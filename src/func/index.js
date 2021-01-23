@@ -118,4 +118,22 @@ module.exports = {
       })
       .join(" ");
   },
+  perms: (str) => {
+    return str.map((v) => {
+      if (!v || typeof v !== "string")
+        throw new TypeError(
+          `Parameter str must be typeof String, recieved type "${typeof str}"`
+        );
+      if (v.includes("_")) {
+        return v
+          .split(/_/g)
+          .map((s) => {
+            return s.charAt(0) + s.slice(1).toLowerCase();
+          })
+          .join(" ");
+      } else {
+        return v.charAt(0) + v.slice(1).toLowerCase();
+      }
+    });
+  },
 };

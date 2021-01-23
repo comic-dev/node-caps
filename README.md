@@ -18,6 +18,7 @@ Caps.array(); /* Array, like All but using an array */
 Caps.sent(); /* Captialises first word like Default, but capitalises every word after the dot */
 Caps.dash(); /* Like Array, but without using an array to split the elements, but an dash (-) */
 Caps.reg(); /* Converts an country name to the right capitalization */
+Caps.perms(); /* Coverts the standard Discord.js permission display to readable text */
 ```
 
 # Usage
@@ -85,13 +86,27 @@ Caps.dash("hi-there"); /* Expected output: 'Hi-There' */
 **Reg**
 
 ```js
-const Caps = require('node-caps');
+const Caps = require("node-caps");
 // Or
-import Caps from 'node-caps';
+import Caps from "node-caps";
 
-Caps.reg('the netherlands') /* Expected output: 'The Netherlands' */
+Caps.reg("the netherlands"); /* Expected output: 'The Netherlands' */
 // But
-Caps.reg('north-us') /* Expected output: 'North-US' */
+Caps.reg("north-us"); /* Expected output: 'North-US' */
+```
+
+**Perms**
+
+```js
+const Caps = require("node-caps");
+// Or
+import Caps from "node-caps";
+
+Caps.perms(["ADMINISTRATOR"]); /* Expected output: ['Administrator'] */
+
+// And
+
+Caps.perms(["MANAGE_MESSAGES"]); /* Expected output: ['Manage Messages'] */
 ```
 
 **_Copyright (c) 2020 simp. & Salvage_**
