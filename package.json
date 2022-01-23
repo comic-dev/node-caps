@@ -5,6 +5,7 @@
   "module": "./src/esm/index.esm.js",
   "type": "module",
   "main": "./index.ts",
+  "types": "types/index.d.ts",
   "scripts": {
     "lint": "prettier --write ."
   },
