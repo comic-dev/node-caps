@@ -23,7 +23,7 @@ module.exports = {
       str.slice(first + 1)
     );
   },
-  all: (str: string) => {
+  all: (str) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
         `Parameter str must be typeof String, recieved type "${typeof str}"`
