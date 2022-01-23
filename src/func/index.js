@@ -1,5 +1,5 @@
 module.exports = {
-  def: (str: string) => {
+  def: (str) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
         `Parameter str must be typeof String, recieved type "${typeof str}"`
@@ -11,7 +11,7 @@ module.exports = {
       str.slice(first + 1).toLowerCase()
     );
   },
-  keep: (str: string): string => {
+  keep: (str) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
         `Parameter str must be typeof String, recieved type ${typeof str}`
@@ -23,7 +23,7 @@ module.exports = {
       str.slice(first + 1)
     );
   },
-  all: (str: string): string => {
+  all: (str: string) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
         `Parameter str must be typeof String, recieved type "${typeof str}"`
@@ -40,7 +40,7 @@ module.exports = {
       })
       .join(" ");
   },
-  array: (str: string[]): string[] => {
+  array: (str) => {
     if (!str || (typeof str[0] !== "string" && str.length > 1))
       throw new TypeError(
         `Parameter str must be typeof Array, recieved type "${typeof str}"`
@@ -61,7 +61,7 @@ module.exports = {
       throw error;
     }
   },
-  sent: (str: string): string => {
+  sent: (str) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
         `Parameter str must be typeof String, recieved type "${typeof str}"`
@@ -78,7 +78,7 @@ module.exports = {
       })
       .join(".");
   },
-  dash: (str: string): string => {
+  dash: (str) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
         `Parameter str must be typeof String, recieved type "${typeof str}"`
@@ -95,7 +95,7 @@ module.exports = {
       })
       .join(".");
   },
-  reg: (str: string): string => {
+  reg: (str) => {
     if (str.match(/-/) && str.split("-")[1].length < 3)
       return str
         .split("-")
@@ -118,7 +118,7 @@ module.exports = {
       })
       .join(" ");
   },
-  perms: (str: string[]): string[] => {
+  perms: (str) => {
     return str.map((v) => {
       if (!v || typeof v !== "string")
         throw new TypeError(
