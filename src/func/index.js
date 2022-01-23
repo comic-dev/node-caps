@@ -40,13 +40,13 @@ module.exports = {
       })
       .join(" ");
   },
-  array: (str) => {
-    if (!str || (typeof str[0] !== "string" && str.length > 1))
+  array: (arr) => {
+    if (!Array.isArray(arr))
       throw new TypeError(
-        `Parameter str must be typeof Array, recieved type "${typeof str}"`
+        `Parameter str must be typeof Array, recieved type "${typeof arr}"`
       );
     try {
-      return str.map((s) => {
+      return arr.map((s) => {
         const first = s.search(/[a-zA-Z]/);
         return (
           s.slice(0, first) +
@@ -56,7 +56,7 @@ module.exports = {
       });
     } catch (err) {
       let error = new TypeError(
-        `Parameter str must be typeof Array, recieved type ${typeof str}`
+        `Parameter str must be typeof Array, recieved type ${typeof arr}`
       );
       throw error;
     }
