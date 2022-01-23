@@ -4,7 +4,7 @@
   "description": "An easy-to-use module to capitalise an string or array",
   "module": "./src/esm/index.esm.js",
   "type": "module",
-  "main": "./index.js",
+  "main": ".src/func/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
     "lint": "prettier --write ."
