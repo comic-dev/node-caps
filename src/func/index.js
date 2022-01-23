@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   def: (str: string) => {
     if (!str || typeof str !== "string")
       throw new TypeError(
@@ -136,13 +136,4 @@ export default {
       }
     });
   },
-} as {
-  def(str: string): string;
-  keep(str: string): string;
-  all(str: string): string;
-  array(str: string[]): string[];
-  sent(str: string): string;
-  dash(str: string): string;
-  reg(str: string): string;
-  perms(str: string[]): string[];
-};
+}
