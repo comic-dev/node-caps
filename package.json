@@ -1,10 +1,10 @@
 {
   "name": "node-caps",
-  "version": "1.3.1",
+  "version": "1.3.6",
   "description": "An easy-to-use module to capitalise an string or array",
   "module": "./src/esm/index.esm.js",
-  "type": "module",
-  "main": ".src/func/index.js",
+  "type": "commonjs",
+  "main": "./src/func/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
     "lint": "prettier --write ."
@@ -18,41 +18,5 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*{.js,.ts,.d.ts,.json}": "prettier --write ."
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-angular"
-    ],
-    "rules": {
-      "scope-case": [
-        2,
-        "always",
-        "pascal-case"
-      ],
-      "type-enum": [
-        2,
-        "always",
-        [
-          "chore",
-          "feat",
-          "fix",
-          "revert",
-          "style",
-          "test",
-          "deps",
-          "docs",
-          "ci"
-        ]
-      ]
-    }
   }
 }
